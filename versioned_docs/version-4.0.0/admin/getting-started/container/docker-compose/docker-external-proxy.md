@@ -183,8 +183,6 @@ server {
 
     ssl_certificate /etc/letsencrypt/live/cloud.YOUR.DOMAIN/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/cloud.YOUR.DOMAIN/privkey.pem;
-    # Increase max upload size (required for Tus — without this, uploads over 1 MB fail)
-    client_max_body_size 10M;
     # Disable buffering - essential for SSE
     proxy_buffering off;
     proxy_request_buffering off;
